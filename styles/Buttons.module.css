@@ -1,0 +1,30 @@
+.animatedButton {
+  background: #000;
+  font-weight: 700;
+  padding: 0;
+  border-radius: 5px;
+}
+
+.animatedButton span {
+  display: block;
+  background: #a7a7a7;
+  padding: 1.5rem 2rem;
+  border: 1px solid #000;
+  border-radius: 5px;
+  transform: translate3d(-4px, -4px, 0);
+  transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
+}
+
+.animatedButton:hover span {
+  transform: translate3d(0, 0, 0);
+}
+
+.primaryButton {
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  font-weight: 700;
+  font-size: 0.9rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  color: #fff;
+}

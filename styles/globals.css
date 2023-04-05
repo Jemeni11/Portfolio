@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   font-size: 1rem;
   background-color: #1f2028;
@@ -23,4 +27,48 @@ a {
 
 a:hover {
   cursor: pointer;
+}
+
+button {
+  --color-text: #111;
+  --color-number: #999;
+  --color-bg: #fff;
+  --color-link: #1352d1;
+  --color-link-hover: #111;
+  -webkit-font-smoothing: antialiased;
+  --cda-position: fixed;
+  --cda-width: 280px;
+  --cda-height: auto;
+  --cda-left: 3rem;
+  --cda-right: auto;
+  --cda-top: auto;
+  --cda-bottom: 3rem;
+  --cda-background: transparent;
+  --cda-border-width: 0;
+  --cda-border-color: transparent;
+  --cda-text-color: var(--color-link);
+  --cda-text-color-hover: var(--color-link-hover);
+  --cda-text-weight: inherit;
+  --cda-text-size: inherit;
+  --cda-text-align: left;
+  --footer-align: start;
+  --cda-footer-color: var(--color-link);
+  --cda-footer-color-hover: var(--color-link-hover);
+  --cda-padding: 0;
+  --cda-footer-fontsize: 0.95rem;
+  box-sizing: border-box;
+  pointer-events: auto;
+  cursor: pointer;
+  background: #e7e7e7;
+  border: none;
+  padding: 1.5rem 3rem;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  position: relative;
+  display: inline-block;
+}
+
+.small {
+  font-size: 0.9rem;
 }
