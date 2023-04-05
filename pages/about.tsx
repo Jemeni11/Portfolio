@@ -1,8 +1,23 @@
+import Head from "next/head";
+import styles from "@/styles/About.module.css";
+
 const About = () => {
   return (
-    <div>
-      <h1>About</h1>
-    </div>
+    <>
+      <Head>
+        <meta
+          name="description"
+          content="The about me page of Emmanuel Jemeni's website"
+        />
+        <title>About | Emmanuel Jemeni</title>
+      </Head>
+      <div className={styles.aboutPageContainer}>
+        <section>
+          <p>yo</p>
+          <h1>I'm Emmanuel !</h1>
+        </section>
+      </div>
+    </>
   );
 };
 
