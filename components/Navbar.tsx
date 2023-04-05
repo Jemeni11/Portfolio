@@ -1,21 +1,24 @@
 import Image from "next/image";
 import Link from "next/link";
 import CartoonMe_NoBG from "../public/cartoon_me-removebg.png";
-import styles from "../styles/Navbar.module.css";
 
 export default function Navbar() {
   return (
-    <nav className={styles.navbarContainer}>
+    <nav className="flex justify-between w-full min-h-[13.75vh] py-[1.5vh] px-12">
       <Link href="/">
-        <div className={styles.creatorDataContainer}>
-          <Image src={CartoonMe_NoBG} alt="Icon" />
-          <div className={styles.creatorNameContainer}>
-            <p>Emmanuel C. Jemeni</p>
-            <p>@Jemeni11</p>
+        <div className="flex items-center">
+          <Image
+            src={CartoonMe_NoBG}
+            alt="Icon"
+            className="object-contain max-h-[10vh] max-w-[10%]"
+          />
+          <div className="">
+            <p className="text-xl font-bold">Emmanuel C. Jemeni</p>
+            <p className="opacity-[.85]">@Jemeni11</p>
           </div>
         </div>
       </Link>
-      <ul className={styles.navList}>
+      <ul className="flex-[2_2_0%] list-none flex gap-5 justify-end items-center text-2xl">
         <li>
           <Link href="/">Home</Link>
         </li>

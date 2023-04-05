@@ -11,7 +11,11 @@ export default function PrimaryButton({
   if (animated) buttonstyle += ` ${styles.animatedButton}`;
   if (buttonClass) buttonstyle += ` ${buttonClass}`;
   return (
-    <button onClick={onClick} className={`py-4 px-6 border border-white border-solid ${buttonstyle}`} type="button">
+    <button
+      onClick={onClick}
+      className={`py-4 px-6 border border-white border-solid ${buttonstyle}`}
+      type="button"
+    >
       <span>{title}</span>
     </button>
   );
