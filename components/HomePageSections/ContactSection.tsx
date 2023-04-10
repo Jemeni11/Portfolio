@@ -1,5 +1,5 @@
 import PrimaryButton from "@/components/Buttons/PrimaryButton";
-import SectionTemplate from "./SectionTemplate";
+import SectionTemplate from "../SectionTemplate";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import CoffeeCall from "@/public/Coffee_call.svg";

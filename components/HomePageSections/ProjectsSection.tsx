@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import SectionTemplate from "./SectionTemplate";
+import SectionTemplate from "../SectionTemplate";
 import PrimaryButton from "@/components/Buttons/PrimaryButton";
 
 export default function ProjectsSection() {
@@ -35,12 +35,13 @@ export default function ProjectsSection() {
           <div className="flex gap-4">
             <PrimaryButton
               title="Read More About This Project"
+              // TODO: Change this to the actual project page
               onClick={() => router.push("/projects/red")}
               buttonClass="hover:bg-white hover:text-black"
             />
             <PrimaryButton
               title="Look at all my projects"
-              onClick={() => router.push("/projects/red")}
+              onClick={() => router.push("/projects/")}
               buttonClass="hover:bg-white hover:text-black"
             />
           </div>

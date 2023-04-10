@@ -1,5 +1,5 @@
-import SectionTemplate from "./SectionTemplate";
-import PrimaryButton from "./Buttons/PrimaryButton";
+import SectionTemplate from "../SectionTemplate";
+import PrimaryButton from "../Buttons/PrimaryButton";
 import { useRouter } from "next/router";
 
 export default function AboutSection() {
