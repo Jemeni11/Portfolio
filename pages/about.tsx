@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Quote from "@/components/Quote";
-import KaushanScriptText from "@/components/KaushanScriptText";
+import KaushanScriptClassName from "@/components/FontsClassNames/KaushanScriptClassName";
+import FirstPageSection from "@/components/FirstPageSection";
 
 const About = () => {
   return (
@@ -13,11 +14,7 @@ const About = () => {
         <title>About | Emmanuel Jemeni</title>
       </Head>
       <div className="w-full flex flex-col min-h-screen">
-        <section className="w-full min-h-[85vh] flex flex-col justify-center items-center gap-y-2">
-          <p className=" font-bold text-[10rem] text-white/[.725]">
-            <KaushanScriptText text="Hi There" />
-          </p>
-        </section>
+        <FirstPageSection text="About Me" />
         <section>
           <Quote
             cite_link="https://me.me/i/jesus-apolinaris-we-are-not-strangers-only-the-introduction-is-quote-8c1ebf3c825643b5b6160e655063c961"
@@ -27,7 +24,10 @@ const About = () => {
         </section>
         <section>
           <h1>I'm Emmanuel Chinonso Jemeni</h1>
-          <KaushanScriptText text="Pronunciation: ih-MAH-nyu-wuhl CHEE-none-so GEM-many" />
+          <span
+            className={KaushanScriptClassName}
+            children="Pronunciation: ih-MAH-nyu-wuhl CHEE-none-so GEM-many"
+          />
         </section>
       </div>
     </>
