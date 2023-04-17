@@ -27,16 +27,16 @@ export default function ProjectsSection() {
             E-commerce store
           </h4>
           <p>
-            This is an e-commerce store built with ReactJS, Redux, and a copy of
-            the FakeStoreAPI data saved on a Firebase database. It is a fully
-            functional e-commerce store with features like, cart, checkout, and
-            payment.
+            This is an e-commerce store built with ReactJS, Redux Toolkit, React
+            Router, Vite, and a copy of the FakeStoreAPI data saved on a
+            Firebase database. It is a fully functional e-commerce store with
+            features like adding/removing products from/to the cart and a
+            checkout dialog.
           </p>
           <div className="flex gap-4">
             <PrimaryButton
               title="Read More About This Project"
-              // TODO: Change this to the actual project page
-              onClick={() => router.push("/projects/red")}
+              onClick={() => router.push("/projects/web_project_1")}
               buttonClass="hover:bg-white hover:text-black"
             />
             <PrimaryButton
