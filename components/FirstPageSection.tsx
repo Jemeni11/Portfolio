@@ -1,4 +1,4 @@
-import KaushanScriptClassName from "./KaushanScriptClassName";
+import KaushanScriptClassName from "@/components/FontsClassNames/KaushanScriptClassName";
 
 export default function FirstPageSection({ text }: { text: string }) {
   return (
