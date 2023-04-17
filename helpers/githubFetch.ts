@@ -17,7 +17,7 @@ async function getDataFromOctokitResponse(
   octokitPullResponse: components["schemas"]["pull-request"],
   owner: string,
   repo: string,
-  pull_request: number
+  pull_request_number: number
 ): Promise<GithubPullRequestData> {
   const title = octokitPullResponse.title;
   const user_link = octokitPullResponse.user!.html_url;
@@ -32,7 +32,7 @@ async function getDataFromOctokitResponse(
   return {
     owner: owner,
     repo: repo,
-    pull_request_number: pull_request,
+    pull_request_number: pull_request_number,
     number_of_commits: number_of_commits,
     title: title,
     user_link: user_link,
@@ -54,14 +54,14 @@ export default async function githubPullRequestFetch(
   const linkArray = pullRequestLink.split("/");
   const owner = linkArray[3];
   const repo = linkArray[4];
-  const pull_request = +linkArray[6];
+  const pull_request_number = +linkArray[6];
 
   const response = await octokit.request(
     "GET /repos/{owner}/{repo}/pulls/{pull_number}",
     {
       owner: owner,
       repo: repo,
-      pull_number: pull_request,
+      pull_number: pull_request_number,
       headers: {
         "X-GitHub-Api-Version": "2022-11-28",
         accept: "application/vnd.github+json",
@@ -69,5 +69,10 @@ export default async function githubPullRequestFetch(
     }
   );
 
-  return getDataFromOctokitResponse(response.data, owner, repo, pull_request);
+  return getDataFromOctokitResponse(
+    response.data,
+    owner,
+    repo,
+    pull_request_number
+  );
 }
