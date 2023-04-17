@@ -131,21 +131,18 @@ function OpenSource({
 export const getStaticProps: GetStaticProps<{
   githubPullRequestsDataArray: GithubPullRequestData[];
 }> = async () => {
-  const YOUR_ACCESS_TOKEN = process.env.GITHUB_API_AUTH_KEY as string;
+  const GITHUB_ACCESS_TOKEN = process.env.GITHUB_API_AUTH_KEY as string;
 
-  const githubPullRequestsDataArray: GithubPullRequestData[] = [];
-
-  PullRequestsArray.forEach(async (pullRequestObject) => {
-    const data = await githubPullRequestFetch(
-      YOUR_ACCESS_TOKEN,
-      pullRequestObject.link
-    );
-    githubPullRequestsDataArray.push(data);
+  const promises = PullRequestsArray.map(async (pullRequestObject) => {
+    return githubPullRequestFetch(GITHUB_ACCESS_TOKEN, pullRequestObject.link);
   });
+
+  const githubPullRequestsDataArray: GithubPullRequestData[] =
+    await Promise.all(promises);
 
   return {
     props: {
-      githubPullRequestsDataArray: githubPullRequestsDataArray,
+      githubPullRequestsDataArray,
     },
   };
 };
@@ -159,6 +156,6 @@ export async function getStaticPaths() {
 
   return {
     paths: ["/projects/opensource", ...allProjectPaths],
-    fallback: true,
+    fallback: "blocking",
   };
 }
