@@ -1,4 +1,4 @@
-import type { MouseEventHandler } from "react/index.d.ts";
+import type { MouseEventHandler } from "react/index";
 
 export type button = {
   title: string;
