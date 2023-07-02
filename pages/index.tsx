@@ -16,7 +16,7 @@ export default function Home() {
         />
         <title>Home | Emmanuel Jemeni</title>
       </Head>
-      <div>
+      <div className="flex flex-col md:gap-y-4">
         <HeroSection />
         <AboutSection />
         <ProjectsSection />
