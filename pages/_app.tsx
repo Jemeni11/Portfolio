@@ -1,8 +1,17 @@
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import Head from "next/head";
-import { PT_Sans } from "@next/font/google";
 import Navbar from "@/components/Navbar";
+import { PT_Sans, Kaushan_Script, Sriracha } from "@next/font/google";
+
+// https://nextjs.org/docs/pages/building-your-application/optimizing/fonts#preloading
+export const Kaushan_Script_Font = Kaushan_Script({
+  weight: "400",
+  style: "normal",
+  subsets: ["latin"],
+});
+
+export const SrirachaFont = Sriracha({ weight: "400", subsets: ["latin"] });
 
 const PTSans = PT_Sans({ weight: "400", subsets: ["latin"] });
 
