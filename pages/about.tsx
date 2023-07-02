@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Quote from "@/components/Quote";
-import KaushanScriptClassName from "@/components/FontsClassNames/KaushanScriptClassName";
+import { Kaushan_Script_Font } from "@/pages/_app";
 import FirstPageSection from "@/components/FirstPageSection";
 
 const About = () => {
@@ -25,9 +25,12 @@ const About = () => {
         <section>
           <h1>I'm Emmanuel Chinonso Jemeni</h1>
           <span
-            className={KaushanScriptClassName}
+            className={Kaushan_Script_Font.className}
             children="Pronunciation: ih-MAH-nyu-wuhl CHEE-none-so GEM-many"
           />
+        </section>
+        <section>
+          
         </section>
       </div>
     </>
