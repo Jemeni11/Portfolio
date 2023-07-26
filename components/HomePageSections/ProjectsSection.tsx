@@ -13,7 +13,7 @@ export default function ProjectsSection() {
             loop
             muted
             poster="./react-redux.png"
-            style={{ width: "100%", height: "max-height" }}
+            style={{ width: "100%", height: "max-content" }}
           >
             <source src="./react-redux.mp4" type="video/mp4" />
             <p>
